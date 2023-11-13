@@ -77,6 +77,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Pomodoro Clock</h1>
       <p id="break-label">Break Length</p>
       <p id="session-label">Session Length</p>
       <button id="break-decrement" onClick={decrementBreak}>-</button>
