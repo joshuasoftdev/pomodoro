@@ -17,27 +17,30 @@ function App() {
     // Add code here to stop any running timer
   };
 
-  const decrementBreak = () => {
-    if (breakLength > 1) {
-      setBreakLength(breakLength - 1);
-    }
-  };
-
   const incrementBreak = () => {
     if (breakLength < 60) {
       setBreakLength(breakLength + 1);
     }
   };
 
+  const decrementBreak = () => {
+    if (breakLength > 1) {
+      setBreakLength(breakLength - 1);
+    }
+  };
+
+
   const decrementSession = () => {
     if (sessionLength > 1) {
       setSessionLength(sessionLength - 1);
+      setTimeLeft(`${(sessionLength - 1).toString().padStart(2, '0')}:00`);
     }
   };
 
   const incrementSession = () => {
     if (sessionLength < 60) {
       setSessionLength(sessionLength + 1);
+      setTimeLeft(`${(sessionLength + 1).toString().padStart(2, '0')}:00`);
     }
   };
 
@@ -76,6 +79,7 @@ function App() {
 
 
   return (
+    <body>
     <div className="App">
       <div className='header'>
       <h1>Pomodoro Clock</h1>
@@ -93,6 +97,7 @@ function App() {
       <button id="start_stop" onClick={startStop}>Start/Stop</button>
       <button id="reset" onClick={reset}>Reset</button>
     </div>
+    </body>
   );
 }
 

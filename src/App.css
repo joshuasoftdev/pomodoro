@@ -1,6 +1,17 @@
+body {
+  background-color: #b71c1c;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+}
+
 .App {
   text-align: center;
-  background-color: antiquewhite;
+  background-color: rgba(250, 235, 215, 0.355);
 }
 
 .App-header {
