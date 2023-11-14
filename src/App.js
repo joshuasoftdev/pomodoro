@@ -77,15 +77,17 @@ function App() {
 
   return (
     <div className="App">
+      <div className='header'>
       <h1>Pomodoro Clock</h1>
-      <p id="break-label">Break Length</p>
+      </div>
       <p id="session-label">Session Length</p>
-      <button id="break-decrement" onClick={decrementBreak}>-</button>
-      <button id="session-decrement" onClick={decrementSession}>-</button>
-      <button id="break-increment" onClick={incrementBreak}>+</button>
-      <button id="session-increment" onClick={incrementSession}>+</button>
-      <p id="break-length">{breakLength}</p>
       <p id="session-length">{sessionLength}</p>
+      <button id="session-decrement" onClick={decrementSession}>-</button>
+      <button id="session-increment" onClick={incrementSession}>+</button>
+      <p id="break-label">Break Length</p>
+      <p id="break-length">{breakLength}</p>
+      <button id="break-decrement" onClick={decrementBreak}>-</button>
+      <button id="break-increment" onClick={incrementBreak}>+</button>
       <p id="timer-label">{isSession ? 'Session' : 'Break'}</p>
       <p id="time-left">{timeLeft}</p>
       <button id="start_stop" onClick={startStop}>Start/Stop</button>
